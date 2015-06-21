@@ -2,7 +2,8 @@
 ## 
 ## This file  provides two  functions that can be  used for caching  the time
 ## consuming operation of calculating the inverse of a matrix:
-## 1. makeCacheMatrix: Create a special matrix that can cache its inverse.
+## 1. makeCacheMatrix: Create a  special  matrix  object  that  can cache its 
+##                     inverse.
 ## 2. cacheSolve:      Calculates the  inverse of  the matrix, and caches the 
 ##                     calculation so  that in any subsequent call it returns 
 ##                     the value from the cache  (providing that  the data of 
@@ -40,7 +41,6 @@ makeCacheMatrix <- function(x = matrix()) {
 ## of the special matrix  and caches the  result by calling "it's" setinverse 
 ## function.
 cacheSolve <- function(x, ...) {
-      ## Return a matrix that is the inverse of 'x'
 	i <- x$getinverse()
 	if(!is.null(i)){
 		return(i)
